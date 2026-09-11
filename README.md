@@ -199,7 +199,7 @@ O sistema possui um layout com:
 
 A tela inicial apresenta o sistema e disponibiliza acesso às principais áreas da aplicação.
 
-![Tela Inicial](LojaMVC/imagens/tela_inicial.png)
+![Tela Inicial](LojaMVC/imagens/cadastro_produto.png)
 
 ---
 
@@ -215,7 +215,7 @@ Tela utilizada para realizar o cadastro de novos clientes.
 
 Tela utilizada para realizar o cadastro de novos produtos.
 
-![Cadastro de Produtos](LojaMVC/imagens/cadastro_produto.png)
+![Cadastro de Produtos](LojaMVC/imagens/tela_inicial.png)
 
 ---
 
