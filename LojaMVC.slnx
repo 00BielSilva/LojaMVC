@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="LojaMVC/LojaMVC.csproj" />
+  <Project Path="LojaMVCTests/LojaMVCTests.csproj" />
+</Solution>
