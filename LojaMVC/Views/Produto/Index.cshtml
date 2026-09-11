@@ -1,47 +1,121 @@
 @model IEnumerable<LojaMVC.Models.Produto>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Produtos";
 }
 
-<h1>Index</h1>
+<div class="container page-container">
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Preco)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Estoque)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(model => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(model => item.Preco)
-            </td>
-            <td>
-                @Html.DisplayFor(model => item.Estoque)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id_produto">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id_produto">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id_produto">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <div>
+            <h1>Produtos</h1>
+
+            <p class="text-muted">
+                Gerenciamento de produtos cadastrados
+            </p>
+        </div>
+
+        <a asp-action="Create" class="btn btn-primary">
+            + Novo Produto
+        </a>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="card-header">
+            Lista de Produtos
+        </div>
+
+        <div class="table-responsive">
+
+            <table class="table">
+
+                <thead>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Estoque</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td>
+                                @item.Id_produto
+                            </td>
+
+                            <td>
+                                @item.Nome
+                            </td>
+
+                            <td>
+                                R$ @item.Preco.ToString("F2")
+                            </td>
+
+                            <td>
+                                @item.Estoque
+                            </td>
+
+                            <td>
+
+                                @if (item.Estoque > 0)
+                                {
+                                    <span class="badge bg-success">
+                                        Disponível
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-danger">
+                                        Sem estoque
+                                    </span>
+                                }
+
+                            </td>
+
+                            <td>
+
+                                <a asp-action="Edit"
+                                   asp-route-id="@item.Id_produto"
+                                   class="btn btn-sm btn-warning">
+                                    Editar
+                                </a>
+
+                                <a asp-action="Details"
+                                   asp-route-id="@item.Id_produto"
+                                   class="btn btn-sm btn-outline-light">
+                                    Detalhes
+                                </a>
+
+                                <a asp-action="Delete"
+                                   asp-route-id="@item.Id_produto"
+                                   class="btn btn-sm btn-danger">
+                                    Excluir
+                                </a>
+
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>

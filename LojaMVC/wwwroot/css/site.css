@@ -1,31 +1,323 @@
-html {
-  font-size: 14px;
-}
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
 
-@media (min-width: 768px) {
-  html {
+html {
     font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin: 0;
+    background: #121212;
+    color: #f1f1f1;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+main {
+    min-height: calc(100vh - 80px);
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+.container {
+    max-width: 1100px;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    background: #1b1b1b !important;
+    border-bottom: 1px solid #333 !important;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-brand {
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.navbar .nav-link {
+    color: #cfcfcf !important;
+    transition: 0.2s;
+}
+
+    .navbar .nav-link:hover {
+        color: #ffffff !important;
+    }
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+h1 {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+h2, h3, h4, h5 {
+    color: #ffffff;
+}
+
+.text-muted {
+    color: #999 !important;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    color: #ffffff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
+}
+
+.card-header {
+    background: #242424;
+    color: white;
+    border-bottom: 1px solid #333;
+}
+
+.card-footer {
+    background: #1e1e1e !important;
+    border-top: 1px solid #333 !important;
+}
+
+
+/* =========================
+   TABELA
+========================= */
+
+.table {
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+    .table thead {
+        background: #292929;
+    }
+
+        .table thead th {
+            color: #ffffff;
+            font-weight: 600;
+            border-bottom: 1px solid #444;
+            padding: 14px;
+        }
+
+    .table tbody td {
+        color: #d8d8d8;
+        padding: 14px;
+        vertical-align: middle;
+        border-bottom: 1px solid #333;
+    }
+
+    .table tbody tr {
+        background: #1e1e1e;
+        transition: 0.2s;
+    }
+
+        .table tbody tr:hover {
+            background: #292929;
+        }
+
+
+/* =========================
+   FORMULÁRIOS
+========================= */
+
+.form-label {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.form-control {
+    background: #252525;
+    color: #ffffff;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 11px;
+}
+
+    .form-control:focus {
+        background: #252525;
+        color: #ffffff;
+        border-color: #0d6efd;
+        box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.2);
+    }
+
+    .form-control::placeholder {
+        color: #888;
+    }
+
+.form-check-label {
+    color: #ffffff;
+}
+
+.form-check-input {
+    background-color: #252525;
+    border-color: #555;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.btn {
+    border-radius: 7px;
+    padding: 9px 16px;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+    .btn-primary:hover {
+        background-color: #0b5ed7;
+    }
+
+.btn-warning {
+    color: #000;
+}
+
+.btn-outline-light:hover {
+    color: #000;
+}
+
+
+/* =========================
+   BADGES
+========================= */
+
+.badge {
+    padding: 7px 10px;
+    border-radius: 20px;
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+    color: #4da3ff;
+}
+
+    a:hover {
+        color: #7cbdff;
+    }
+
+
+/* =========================
+   VALIDAÇÃO
+========================= */
+
+.text-danger {
+    color: #ff6b6b !important;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #1b1b1b;
+    color: #999;
+    border-top: 1px solid #333;
+    padding: 20px 0;
+}
+
+
+/* =========================
+   ESPAÇAMENTO DAS PÁGINAS
+========================= */
+
+.page-container {
+    padding-top: 45px;
+    padding-bottom: 50px;
+}
+/* FUNDO DA PÁGINA */
+html,
+body {
+    background-color: #121212 !important;
+    color: #ffffff;
+    min-height: 100%;
+}
+
+main {
+    background-color: #121212 !important;
+    min-height: calc(100vh - 70px);
+}
+
+
+/* CARD DA TABELA */
+.card {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border: 1px solid #333 !important;
+}
+
+
+/* CABEÇALHO */
+.card-header {
+    background-color: #242424 !important;
+    color: #ffffff !important;
+    border-bottom: 1px solid #444 !important;
+}
+
+
+/* TABELA */
+.table {
+    --bs-table-bg: #1e1e1e !important;
+    --bs-table-color: #ffffff !important;
+    --bs-table-border-color: #333 !important;
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+}
+
+
+    /* CABEÇALHO DA TABELA */
+    .table thead {
+        background-color: #292929 !important;
+    }
+
+        .table thead th {
+            background-color: #292929 !important;
+            color: #ffffff !important;
+            border-color: #444 !important;
+        }
+
+
+    /* LINHAS */
+    .table tbody tr {
+        background-color: #1e1e1e !important;
+        color: #ffffff !important;
+    }
+
+        .table tbody tr:hover {
+            background-color: #292929 !important;
+        }
+
+
+    /* CÉLULAS */
+    .table tbody td {
+        background-color: #1e1e1e !important;
+        color: #dddddd !important;
+        border-color: #333 !important;
+    }
+
+
+/* RODAPÉ DO CARD */
+.card-footer {
+    background-color: #1e1e1e !important;
+    border-color: #333 !important;
 }
